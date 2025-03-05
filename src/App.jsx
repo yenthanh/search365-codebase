@@ -1,19 +1,18 @@
-import "./App.css";
-import ScrollSpy from "./ScrollSpy";
+import "./index.css";
 import SearchAI from "./SearchAI";
 
 function App() {
   return (
     <>
       <SearchAI inputCss="ai-search-input"
-                categoryTextCss="search-category-text"
-                categoryCountCss="search-category-count-active"
-                placeholder="Ask Us"
-                suggestionApiUrl={`https://nab-demo-ae-api.azurewebsites.net/search/all_semantic/categorized-suggested/}`}
-                searchApiUrl={`https://nab-demo-ae-api.azurewebsites.net/hybrid-search?issearchadmin=false`}
-                searchTitle="SEARCH"
-                categorySelectionCss="search-result-content-active"
-                loadingText="Loading..."/>
+        categoryTextCss="search-category-text"
+        categoryCountCss="search-category-count-active"
+        placeholder="Ask Us"
+        suggestionApiUrl={`https://nab-demo-ae-api.azurewebsites.net/search/all_semantic/categorized-suggested/}`}
+        searchApiUrl={`https://nab-demo-ae-api.azurewebsites.net/hybrid-search?issearchadmin=false`}
+        searchTitle="SEARCH"
+        categorySelectionCss="search-result-content-active"
+        loadingText="Loading..." />
     </>
   );
 }

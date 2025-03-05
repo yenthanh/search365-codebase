@@ -65,7 +65,7 @@ const SearchResult = (props) => {
             if (data.body.answers[0]) {
                 setAnswer(data.body.answers[0]["highlights"]);
                 console.log("answer:", answer);
-                setReference(bodyResults[0].url);
+                setReference(bodyResults[0]?.url);
             } else {
                 const questionsAndAnswers = data.body.results
                     .flatMap((result) => result.questions_answers)
@@ -122,7 +122,7 @@ const SearchResult = (props) => {
             if (data.body.answers[0]) {
                 setAnswer(data.body.answers[0]["highlights"]);
                 console.log("answer:", answer);
-                setReference(bodyResults[0].url);
+                setReference(bodyResults[0]?.url);
             } else {
                 const questionsAndAnswers = data.body.results
                     .flatMap((result) => result.questions_answers)
@@ -241,8 +241,8 @@ const SearchResult = (props) => {
                     <ul className="search-content-pos">
                         <li
                             className={`search-result-content ${activeIndex === -1
-                                    ? props.categorySelectionCss ? props.categorySelectionCss : "search-result-content-active"
-                                    : ""
+                                ? props.categorySelectionCss ? props.categorySelectionCss : "search-result-content-active"
+                                : ""
                                 }`}
                         >
                             <a href="#" className="search-result-category"
@@ -258,8 +258,8 @@ const SearchResult = (props) => {
                                 <div className="group">
                                     <span
                                         className={`search-category-count ${activeIndex === -1
-                                                ? props.categoryCountCss ? props.categoryCountCss : "search-category-count-active"
-                                                : "search-category-count-inactive"
+                                            ? props.categoryCountCss ? props.categoryCountCss : "search-category-count-active"
+                                            : "search-category-count-inactive"
                                             }`}
                                     >
                                         {allCountDisplay}
@@ -271,8 +271,8 @@ const SearchResult = (props) => {
                             <li
                                 key={index}
                                 className={`search-result-content ${activeIndex === index
-                                        ? props.categorySelectionCss ? props.categorySelectionCss : "search-result-content-active"
-                                        : ""
+                                    ? props.categorySelectionCss ? props.categorySelectionCss : "search-result-content-active"
+                                    : ""
                                     }`}
                                 onClick={() => handleItemClick(index, item.displayName)}
                                 style={{ cursor: "pointer" }}
@@ -287,8 +287,8 @@ const SearchResult = (props) => {
                                     </span>
                                     <span
                                         className={`search-category-count  ${activeIndex === index
-                                                ? props.categoryCountCss ? props.categoryCountCss : "search-category-count-active"
-                                                : "search-category-count-inactive"
+                                            ? props.categoryCountCss ? props.categoryCountCss : "search-category-count-active"
+                                            : "search-category-count-inactive"
                                             }`}
                                     >
                                         {item.count}
@@ -317,7 +317,7 @@ const SearchResult = (props) => {
                                 <div dangerouslySetInnerHTML={{ __html: answer }} />
                                 <a
                                     style={{ color: "#1F4F82" }}
-                                    href={reference === "" ? bodyResults[0].url : reference}
+                                    href={reference === "" ? bodyResults[0]?.url : reference}
                                     target="_blank"
                                 >
                                     [Reference]
