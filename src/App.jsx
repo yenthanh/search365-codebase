@@ -1,4 +1,6 @@
+import React from "react";
 import "./index.css";
+import "./AISearch.css";
 import SearchAI from "./SearchAI";
 
 function App() {

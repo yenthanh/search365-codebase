@@ -9,23 +9,4 @@ export default defineConfig({
       "react-router-dom": "/node_modules/react-router-dom",
     },
   },
-  build: {
-    outDir: "dist",
-    rollupOptions: {
-      preserveEntrySignatures: "strict",
-      input: {
-        AIsearch: "src/AISearch.jsx",
-        App: "src/App.jsx",
-        main: "src/main.jsx",
-        QuestionList: "src/QuestionList.jsx",
-        SearchAI: "src/SearchAI.jsx",
-        SearchContext: "src/SearchContext.jsx",
-        SearchResult: "src/SearchResult.jsx",
-      },
-      output: {
-        format: "es",
-        entryFileNames: "[name].js",
-      },
-    },
-  },
 });
